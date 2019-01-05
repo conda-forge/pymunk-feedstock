@@ -15,10 +15,10 @@ build:
   # Once resolved, it should be removed.
   script: 
     - export LDFLAGS="-dynamiclib $LDFLAGS"  # [osx]
-    - export LD=clang  # [osx]
+    - export LD=$CC  # [osx]
     - export CFLAGS="$CFLAGS -O3"  # [linux]
     - export LDFLAGS="-shared $LDFLAGS"  # [linux]
-    - export LD=gcc  # [linux]
+    - export LD=$CC  # [linux]
     - "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
