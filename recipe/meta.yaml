@@ -10,15 +10,15 @@ source:
   sha256: d85ae4dc1bc6ee5a0a9ff6f5ff95b4f8a5892cf11985a2433a9eb52daf6515bf
   
 build:
-  number: 0
+  number: 1000
   # Note: --no-deps is currently required due to https://github.com/conda/conda-build/issues/3254
   # Once resolved, it should be removed.
   script: 
     - export LDFLAGS="-dynamiclib $LDFLAGS"  # [osx]
-    - export LD=clang  # [osx]
+    - export LD=$CC  # [osx]
     - export CFLAGS="$CFLAGS -O3"  # [linux]
     - export LDFLAGS="-shared $LDFLAGS"  # [linux]
-    - export LD=gcc  # [linux]
+    - export LD=$CC  # [linux]
     - "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
