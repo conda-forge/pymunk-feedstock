@@ -1,5 +1,5 @@
 {% set name = "pymunk" %}
-{% set version = "5.4.2" %}
+{% set version = "5.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: fc77d5a7585513a3499fc71d2bdbc641d379cf9b6de5258e498aa96848a1fd46
+  sha256: 9ebaf08f0a8f8e9b7c50b1079829f3a4934d499a6c71d284ba5111ea865d6051
   
 build:
-  number: 1000
+  number: 0
   # Note: --no-deps is currently required due to https://github.com/conda/conda-build/issues/3254
   # Once resolved, it should be removed.
   script: 
