@@ -28,10 +28,10 @@ requirements:
   host:
     - python
     - pip
-    - cffi   # [python_impl != "pypy"]
+    - cffi  # [python_impl != "pypy"]
   run:
     - python
-    - cffi # [python_impl != "pypy"]
+    - cffi  # [python_impl != "pypy"]
 
 test:
   commands:
