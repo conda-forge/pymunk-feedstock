@@ -10,7 +10,7 @@ source:
   sha256: 585aabe9a7039b7a2dc07217120b6ccfc2abc200bd381187e0912ae852a63894
 
 build:
-  number: 0
+  number: 1
   # Note: --no-deps is currently required due to https://github.com/conda/conda-build/issues/3254
   # Once resolved, it should be removed.
   script:
