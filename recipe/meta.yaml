@@ -1,5 +1,5 @@
 {% set name = "pymunk" %}
-{% set version = "5.7.0" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,24 +7,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 585aabe9a7039b7a2dc07217120b6ccfc2abc200bd381187e0912ae852a63894
+  sha256: 772a214f6ff87a1a856a881b92242ef4b2f5bedf08d0752f9eff73e045c35812
 
 build:
-  number: 1
-  # Note: --no-deps is currently required due to https://github.com/conda/conda-build/issues/3254
-  # Once resolved, it should be removed.
+  number: 0
   script:
-    - export LDFLAGS="-dynamiclib $LDFLAGS"  # [osx]
-    - export LD=$CC  # [osx]
-    - export CFLAGS="$CFLAGS -O3"  # [linux]
-    - export LDFLAGS="-shared $LDFLAGS"  # [linux]
-    - export LD=$CC  # [linux]
-    - {{ PYTHON }} -m pip install . --no-deps -vv
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ compiler('c') }}  # [unix]
+    - {{ compiler('c') }}
   host:
     - python
     - pip
@@ -35,7 +27,7 @@ requirements:
 
 test:
   commands:
-    - python -m pymunk.tests UnitTest
+    - python -m pymunk.tests
 
 about:
   home: https://www.pymunk.org
