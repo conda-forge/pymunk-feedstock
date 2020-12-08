@@ -11,20 +11,12 @@ source:
 
 build:
   number: 0
-  # Note: --no-deps is currently required due to https://github.com/conda/conda-build/issues/3254
-  # Once resolved, it should be removed.
   script:
-    - export LDFLAGS="-dynamiclib $LDFLAGS"  # [osx]
-    - export LD=$CC  # [osx]
-    - export CFLAGS="$CFLAGS -O3"  # [linux]
-    - export LDFLAGS="-shared $LDFLAGS"  # [linux]
-    - export LD=$CC  # [linux]
-    - {{ PYTHON }} -m pip install . --no-deps -vv
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ compiler('c') }}  # [unix]
+    - {{ compiler('c') }}
   host:
     - python
     - pip
@@ -35,7 +27,7 @@ requirements:
 
 test:
   commands:
-    - python -m pymunk.tests UnitTest
+    - python -m pymunk.tests
 
 about:
   home: https://www.pymunk.org
