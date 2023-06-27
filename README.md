@@ -1,11 +1,11 @@
-About pymunk
-============
+About pymunk-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymunk-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.pymunk.org
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymunk-feedstock/blob/main/LICENSE.txt)
 
 Summary: Pymunk is a easy-to-use pythonic 2d physics library
 
