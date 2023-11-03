@@ -1,13 +1,13 @@
 {% set name = "pymunk" %}
-{% set version = "6.5.2" %}
+{% set version = "6.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 015eaea5a65c9db2a6426f6d4c8b5107a2e97246a9a63747bcc1ff6b09ff29e1
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 89be7b6ba237e313c440edfb99612de59bf119e43976d5c76802907cb7a3911c
 
 build:
   number: 0
