@@ -1,5 +1,5 @@
 {% set name = "pymunk" %}
-{% set version = "6.6.0" %}
+{% set version = "6.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 89be7b6ba237e313c440edfb99612de59bf119e43976d5c76802907cb7a3911c
+  sha256: 7b3bff3852c46a87b497a1a73bb36bb2b2f7e38be2e7c232498b857e79197560
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
