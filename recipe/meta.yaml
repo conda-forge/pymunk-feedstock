@@ -25,6 +25,7 @@ requirements:
     - python
     - pip
     - cffi  # [python_impl != "pypy"]
+    - setuptools
   run:
     - python
     - cffi  # [python_impl != "pypy"]
