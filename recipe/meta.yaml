@@ -10,7 +10,7 @@ source:
   sha256: 765f7c561a859a1b565bc517a47cc3992d6258e860f9174c533033c218af63c3
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv
 
@@ -25,6 +25,7 @@ requirements:
     - python
     - pip
     - cffi  # [python_impl != "pypy"]
+    - setuptools
   run:
     - python
     - cffi  # [python_impl != "pypy"]
