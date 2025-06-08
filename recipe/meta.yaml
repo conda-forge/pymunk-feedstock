@@ -1,5 +1,5 @@
 {% set name = "pymunk" %}
-{% set version = "7.0.0" %}
+{% set version = "7.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ab763e81c03d9a35bbc542412629423f8d202ff90bf2c0771f89cc1a43a8fb23
+  sha256: 96a38e8123f4d89f8820b43640f1f623d6844f1f97eea09c4660f031780a9ff8
 
 build:
   number: 0
