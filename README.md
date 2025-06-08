@@ -13,10 +13,11 @@ Development: https://github.com/viblo/pymunk
 
 Documentation: https://www.pymunk.org
 
-Pymunk is a easy-to-use pythonic 2d physics library that can be used
-whenever you need 2d rigid body physics from Python. Perfect when you need
-2d physics in your game, demo or other application! It is built on top of
-the very capable 2d physics library Chipmunk <http://chipmunk-physics.net>.
+Pymunk is an easy-to-use pythonic 2D physics library that can be used
+whenever you need 2D rigid body physics from Python. Perfect when you need
+2D physics in your game, demo or simulation! It is built on top of Munk2D,
+a fork of the very capable 2D physics library Chipmunk2D
+<http://chipmunk-physics.net>.
 
 
 Current build status
